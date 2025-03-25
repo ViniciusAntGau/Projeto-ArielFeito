@@ -1,0 +1,524 @@
+/* Definir variáveis */
+:root {
+    --color-light-background: #ffffff;
+    --color-light-gray: #ccc;
+    --primary-color: #00E5FF;
+    --secondary-color: #2c2b2b;
+    --light-text-color: #f0f0f0; /* Cor de texto mais suave e clara */
+}
+
+/* Reset de margin e padding para garantir consistência */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('imagem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 120px;
+    height: 40px;
+    background: linear-gradient(to right, #0b132b, #1c2541, #3a506b);
+}
+
+.header-left {
+    color: var(--light-text-color); /* Cor mais suave para texto */
+    font-weight: bold;
+    
+}
+
+.header-right {
+    margin-left: 24px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.header-right:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Navbar */
+nav {
+    background: linear-gradient(135deg, #0b132b, #1c2541, #3a506b, #1c2541); 
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Section - About */
+.about {
+    padding: 80px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    color: var(--light-text-color); /* Cor do texto no About */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave para melhorar contraste */
+}
+
+.about-text h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--light-text-color);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(240, 240, 240, 0.9); /* Cor mais suave e menos intensa para o texto */
+    margin-bottom: 40px;
+}
+.buttom{
+    background-color: rgba(0, 229, 255, 0.2); /* Cor com transparência, similar ao tema do site */
+    color: white;
+    border: 2px solid rgba(0, 229, 255, 0.5); /* Borda com cor principal do site */
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Bungee', cursive; /* Fonte Bungee */
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.buttons {
+    display: flex;
+    gap: 100px;
+    margin: 0;
+    font-family: 'Bungee', cursive;
+    
+}
+
+.primary, .secondary {
+    background-color: rgba(0, 229, 255, 0.2); /* Cor com transparência, similar ao tema do site */
+    color: white;
+    border: 2px solid rgba(0, 229, 255, 0.5); /* Borda com cor principal do site */
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Bungee', cursive; /* Fonte Bungee */
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+ 
+}
+
+
+.secondary {
+    background-color: rgba(187,197,230,0.1);
+    color: #ffffff;
+    border: 2px solid var(--secondary-color);
+}
+
+.primary:hover, .secondary:hover {
+    transform: scale(1.05);
+    background-color: #1d1d1d;
+}
+
+/* Image styling */
+/* .img {
+    flex: 1;
+    max-width: 40%;
+    transform: scaleX(-1);
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar a imagem 
+} */
+
+.img {
+    flex: 1;
+    max-width: 25%; /* Novo valor */
+    transform: scaleX(-1);
+}
+
+.img img {
+    width: 100%; /* Mantido */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        max-width: 100%; /* No mobile, o texto ocupa toda a largura */
+        margin-bottom: 30px;
+    }
+
+    .img {
+        max-width: 100%; /* Imagem também ocupa toda a largura */
+    }
+}
+
+/* Projetos - Título */
+.Projetos{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap
+}
+.Projetos h2 {
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 80px;
+    color: var(--light-text-color);
+    text-align: center; /* Centraliza o texto horizontalmente */
+    width: 100%;
+}
+.ki{
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 80px;
+    color: var(--light-text-color);
+    text-align: center; /* Centraliza o texto horizontalmente */
+    width: 100%;
+}
+.Projetos h2::after {
+    
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 3px; 
+    background: linear-gradient(90deg, 
+        #081A39 0%,   
+        #00E5FF 25%,   
+        #FF7E1D 50%,   
+        #00E5FF 75%,    
+        #081A39 100%    
+    );
+    background-size: 200% 100%; /* Dobro da largura para animação */
+    border-radius: 3px; 
+    animation: stellarFlow 4s linear infinite;
+}
+
+@keyframes stellarFlow {
+    0% {
+        background-position: 100% 0; /* Começa à direita */
+    }
+    100% {
+        background-position: -100% 0; /* Termina à esquerda */
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 524px;
+    border-radius: 24px;
+    overflow: hidden; /* Garante que nada saia dos limites */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Lado Esquerdo: Texto */
+.card-left {
+    flex: 1; /* Ocupa metade do espaço */
+    padding: 40px 40px; /* Adiciona padding de 40px em todos os lados */
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px);
+    text-align: left;
+    color: #fff;
+}
+
+/* Lado Direito: Imagem */
+.card-right {
+    flex: 1; /* Ocupa metade do espaço */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-M {
+    width: 100%; /* Ajusta a imagem ao espaço disponível */
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção sem distorcer */
+    border-radius: 0px 24px 24px 0px; /* Suaviza as bordas do lado direito */
+}
+
+
+.card-left h3 {
+    font-size: 50px;
+}
+
+
+.card-left button, .button {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 24px;
+    padding: 8px 24px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.card-left button:hover, .button:hover {
+    color: #ccc;
+    transform: rotate(10deg);
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+.contato {
+    padding: 0px 120px;
+    background: linear-gradient(to right, #0b132b, #1c2541, #3a506b); /* Fundo com gradiente similar ao nav */
+    color: var(--light-text-color);
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: var(--light-text-color);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-left {
+    flex: 1;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.card-left h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--light-text-color);
+}
+
+.card-left p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: rgba(240, 240, 240, 0.9);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: rgba(240, 240, 240, 0.8);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+button.primary {
+    background-color: rgba(0, 229, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(0, 229, 255, 0.5);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Bungee', cursive;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.primary:hover {
+    background-color: rgba(0, 229, 255, 0.3);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer {
+    background-color: #0b132b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.img-M {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px 24px 24px 0px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-left {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .card-right {
+        margin-top: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
